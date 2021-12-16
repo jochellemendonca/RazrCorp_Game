@@ -88,7 +88,7 @@ class GameBeginCommand extends Command
             'team_A' => 'required|array|size:5',
             'team_B' => 'required|array|size:5',
             'team_A.*' => 'numeric',
-            'team_B.*' => 'numeric', // check each item in the array
+            'team_B.*' => 'numeric',
         ];
         $validator = Validator::make($input, $rules);
         if ($validator->fails()) {
